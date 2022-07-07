@@ -1,0 +1,17 @@
+body {
+  background-image: url('../images/house.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.indicators-tags {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial;
+}
+
+.indicators-numbers {
+  display: flex;
+  flex-direction: row;
+}
