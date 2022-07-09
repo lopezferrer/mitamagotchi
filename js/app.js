@@ -43,6 +43,18 @@ function startFunction () {
 
 comenzar.addEventListener("click", startFunction);
 
+//ageIndicator
+let age = 0;
+function incrementAge() {
+  if(petName != ""){
+    age = parseInt(ageIndicator.innerHTML)
+    age += 1;
+    ageIndicator.innerHTML = age
+  }
+}
+setInterval(incrementAge, 20000);
+
+
 //hunger growth and feeding
 let hunger = 0;
 function incrementHunger() {
@@ -62,15 +74,3 @@ function feedFunction(){
   hungerIndicator.innerHTML = parseInt(hungerIndicator.innerHTML) - 1
 }
 feedBtn.addEventListener("click", feedFunction);
-
-
-//ageIndicator
-let age = 0;
-function incrementAge() {
-  if(petName != ""){
-    age = parseInt(ageIndicator.innerHTML)
-    age += 1;
-    ageIndicator.innerHTML = age
-  }
-}
-setInterval(incrementAge, 20000);
