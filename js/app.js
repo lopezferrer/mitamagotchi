@@ -91,6 +91,6 @@ setInterval(incrementSleepiness, 6000);
 //feeding
 function sleepFunction(){
   if (sleepinessIndicator.innerHTML > 0 && petName != "")
-  sleepinessIndicator.innerHTML = parseInt(SleepinessIndicator.innerHTML) - 5
+  sleepinessIndicator.innerHTML = parseInt(sleepinessIndicator.innerHTML) - 5
 }
-sleepBtn.addEventListener("click", sleepinessFunction);
+sleepBtn.addEventListener("click", sleepFunction);
