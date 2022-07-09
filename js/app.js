@@ -99,3 +99,27 @@ function sleepFunction(){
   }
 }
 sleepBtn.addEventListener("click", sleepFunction);
+
+
+//Sleepiness and sleep
+let boredom = 0;
+function incrementBoredom() {
+  if(petName != "" && boredom < 10){
+    boredom = parseInt(boredomIndicator.innerHTML)
+    boredom += 1;
+    boredomIndicator.innerHTML = boredom;
+  }else if(petName != "" && boredom >= 9){
+    boredom = parseInt(boredomIndicator.innerHTML);
+  }
+}
+setInterval(incrementBoredom, 4000);
+
+//sleep
+function playFunction(){
+  if (boredomIndicator.innerHTML >= 3 && petName != ""){
+    boredomIndicator.innerHTML = parseInt(boredomIndicator.innerHTML) - 3
+  }else if (boredomIndicator.innerHTML < 5 && petName != ""){
+    boredomIndicator.innerHTML = 0
+  }
+}
+playBtn.addEventListener("click", playFunction);
