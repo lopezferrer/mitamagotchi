@@ -64,7 +64,7 @@ function feedFunction(){
 feedBtn.addEventListener("click", feedFunction);
 
 
-//hunger growth and feeding
+//ageIndicator
 let age = 0;
 function incrementAge() {
   if(petName != ""){
