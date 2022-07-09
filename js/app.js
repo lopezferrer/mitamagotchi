@@ -61,7 +61,7 @@ setInterval(incrementHunger, 10000);
 
 //feeding
 function feedFunction(){
-  if (hunger > 0 && petName != "")
+  if (hungerIndicator.innerHTML > 0 && petName != "")
   hungerIndicator.innerHTML = parseInt(hungerIndicator.innerHTML) - 1
 }
 feedBtn.addEventListener("click", feedFunction);
