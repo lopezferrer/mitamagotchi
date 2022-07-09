@@ -50,6 +50,7 @@ comenzar.addEventListener("click", startFunction);
 let hunger = 0;
 function incrementHunger() {
   if(petName != "" && hunger < 10){
+    hunger = parseInt(hungerIndicator.innerHTML)
     hunger += 1;
     hungerIndicator.innerHTML = hunger
   }else if(petName != "" && hunger >= 9){
