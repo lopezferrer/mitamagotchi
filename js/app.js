@@ -57,7 +57,7 @@ function incrementHunger() {
     hunger = parseInt(hungerIndicator.innerHTML);
   }
 }
-setInterval(incrementHunger, 1000);
+setInterval(incrementHunger, 10000);
 
 //feeding
 function feedFunction(){
