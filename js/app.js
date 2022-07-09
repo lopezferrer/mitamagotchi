@@ -2,7 +2,7 @@
 //buttons
 const comenzar = document.querySelector("#picture");
 const feedBtn = document.querySelector("#feed");
-const walkBtn = document.querySelector("#walk");
+const sleepBtn = document.querySelector("#sleep");
 const playBtn = document.querySelector("#play");
 
 //indicators
@@ -74,3 +74,23 @@ function feedFunction(){
   hungerIndicator.innerHTML = parseInt(hungerIndicator.innerHTML) - 1
 }
 feedBtn.addEventListener("click", feedFunction);
+
+//Sleepiness and sleep
+let sleepiness = 0;
+function incrementSleepiness() {
+  if(petName != "" && sleepiness < 10){
+    sleepiness = parseInt(sleepinessIndicator.innerHTML)
+    sleepiness += 1;
+    sleepinessIndicator.innerHTML = sleepiness
+  }else if(petName != "" && sleepiness >= 9){
+    sleepiness = parseInt(sleepinessIndicator.innerHTML);
+  }
+}
+setInterval(incrementSleepiness, 6000);
+
+//feeding
+function sleepFunction(){
+  if (sleepinessIndicator.innerHTML > 0 && petName != "")
+  sleepinessIndicator.innerHTML = parseInt(SleepinessIndicator.innerHTML) - 5
+}
+sleepBtn.addEventListener("click", sleepinessFunction);
