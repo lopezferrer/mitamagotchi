@@ -70,8 +70,10 @@ setInterval(incrementHunger, 2000);
 
 //feeding
 function feedFunction(){
-  if (hungerIndicator.innerHTML > 0 && petName != "")
-  hungerIndicator.innerHTML = parseInt(hungerIndicator.innerHTML) - 1
+  if (hungerIndicator.innerHTML > 0 && petName != ""){
+    hungerIndicator.innerHTML = parseInt(hungerIndicator.innerHTML) - 1
+  }
+
 }
 feedBtn.addEventListener("click", feedFunction);
 
@@ -90,7 +92,10 @@ setInterval(incrementSleepiness, 6000);
 
 //feeding
 function sleepFunction(){
-  if (sleepinessIndicator.innerHTML > 0 && petName != "")
-  sleepinessIndicator.innerHTML = parseInt(sleepinessIndicator.innerHTML) - 5
+  if (sleepinessIndicator.innerHTML >= 5 && petName != ""){
+    sleepinessIndicator.innerHTML = parseInt(sleepinessIndicator.innerHTML) - 5
+  }else if (sleepinessIndicator.innerHTML < 5 && petName != ""){
+    sleepinessIndicator.innerHTML = 0
+  }
 }
 sleepBtn.addEventListener("click", sleepFunction);
