@@ -49,7 +49,12 @@ function incrementAge() {
   if(petName != ""){
     age = parseInt(ageIndicator.innerHTML)
     age += 1;
-    ageIndicator.innerHTML = age
+    ageIndicator.innerHTML = age;
+    if (age > 1){
+      document.getElementById("picture").src="images/puppy2.png"
+      age = parseInt(ageIndicator.innerHTML)
+      ageIndicator.innerHTML = age;
+    }
   }
 }
 setInterval(incrementAge, 20000);
