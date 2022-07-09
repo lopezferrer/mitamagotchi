@@ -90,7 +90,7 @@ function incrementSleepiness() {
 }
 setInterval(incrementSleepiness, 6000);
 
-//feeding
+//sleep
 function sleepFunction(){
   if (sleepinessIndicator.innerHTML >= 5 && petName != ""){
     sleepinessIndicator.innerHTML = parseInt(sleepinessIndicator.innerHTML) - 5
