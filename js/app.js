@@ -54,7 +54,7 @@ function incrementHunger() {
     hunger = parseInt(hungerIndicator.innerHTML);
   }
 }
-setInterval(incrementHunger, 10000);
+setInterval(incrementHunger, 2000);
 
 //feeding
 function feedFunction(){
@@ -62,3 +62,15 @@ function feedFunction(){
   hungerIndicator.innerHTML = parseInt(hungerIndicator.innerHTML) - 1
 }
 feedBtn.addEventListener("click", feedFunction);
+
+
+//hunger growth and feeding
+let age = 0;
+function incrementAge() {
+  if(petName != ""){
+    age = parseInt(ageIndicator.innerHTML)
+    age += 1;
+    ageIndicator.innerHTML = age
+  }
+}
+setInterval(incrementAge, 20000);
