@@ -3,16 +3,13 @@
 const comenzar = document.querySelector("#picture");
 const feedBtn = document.querySelector("#feed");
 const walkBtn = document.querySelector("#walk");
-const cureBtn = document.querySelector("#cure");
-const trainBtn = document.querySelector("#train");
 const playBtn = document.querySelector("#play");
 
 //indicators
 const hungerIndicator = document.querySelector("#hunger");
-const bladderIndicator  = document.querySelector("#bladder");
+const sleepinessIndicator  = document.querySelector("#sleepiness");
 const boredomIndicator  = document.querySelector("#boredom");
-const healthIndicator  = document.querySelector("#health");
-const skillIndicator  = document.querySelector("#skill");
+const ageIndicator  = document.querySelector("#age");
 
 //game settings
 let petName = ""
