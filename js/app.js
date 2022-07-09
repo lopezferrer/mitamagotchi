@@ -39,14 +39,49 @@ function startFunction () {
       petNameTag.style['cursor'] = "auto";
       picture.style['cursor'] = "auto";
       picture.style['animation'] = "dogMoving 8s";
-      picture.style['animation-iteration-count'] = "infinite"
-      hungerIndicator.innerText = 10;
-      bladderIndicator.innerText = 0;
-      boredomIndicator.innerText = 0;
-      healthIndicator.innerText = 10;
-      skillIndicator.innerText = 0;
+      picture.style['animation-iteration-count'] = "infinite";
     }
   }
 }
 
 comenzar.addEventListener("click", startFunction);
+
+//hunger growth and feeding
+let hunger = 0;
+function incrementHunger() {
+  if(hunger < 10 && petName != ""){
+    hunger = parseInt(hungerIndicator.innerHTML) + 1;
+    hungerIndicator.innerHTML = parseInt(hungerIndicator.innerHTML) + 1
+  }else{
+    clearInterval();
+  }
+}
+setInterval(incrementHunger, 10000);
+
+//feeding
+function feedFunction(){
+  if (hunger > 0 && petName != "")
+  hungerIndicator.innerHTML = parseInt(hungerIndicator.innerHTML) - 1
+}
+feedBtn.addEventListener("click", feedFunction)
+
+/*
+//Bladder level and walk
+let bladder= 0;
+function incrementBladder() {
+  if(bladder < 10 && petName != ""){
+    bladder = parseInt(bladderIndicator.innerHTML) + 1;
+    bladderIndicator.innerHTML = parseInt(bladderIndicator.innerHTML) + 1
+  }else{
+    clearInterval();
+  }
+}
+setInterval(incrementBladder, 10000);
+
+//Walk
+function walkFunction(){
+  if (bladder > 0 && petName != "")
+  bladderIndicator.innerHTML = parseInt(bladderIndicator.innerHTML) - 1
+}
+walkBtn.addEventListener("click", walkFunction)
+*/
